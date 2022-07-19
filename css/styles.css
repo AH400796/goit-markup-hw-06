@@ -245,6 +245,10 @@ svg {
   flex-direction: column;
 }
 
+.social {
+  margin-right: 93px;
+}
+
 .footer-address {
   margin-right: 70px;
 }
@@ -639,6 +643,7 @@ svg {
 
 .backdrop {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -649,6 +654,7 @@ svg {
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity var(--transition-duration-modal) var(--timing-function);
 }
@@ -685,4 +691,69 @@ svg {
   border-radius: 50%;
   background: var(--white-text-color);
   border: 1px solid var(--close-button-border-color);
+}
+
+/* Форми */
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+}
+.subscription-form p {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+}
+
+.subscription-group {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.subscription-field {
+  width: 300px;
+  height: 50px;
+  padding: 15px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: var(--third-background-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.subscription-button {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 28px;
+  padding-bottom: 10px;
+  padding-right: 28px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+
+  color: var(--white-text-color);
+  background: var(--accent-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.send-icon {
+  margin-left: 9px;
+  fill: currentColor;
 }
