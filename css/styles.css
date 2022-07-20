@@ -641,6 +641,8 @@ svg {
   transform: translateY(-100%);
 }
 
+/* МОДАЛЬНЕ ВІКНО */
+
 .backdrop {
   position: fixed;
   z-index: 10;
@@ -668,6 +670,10 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
 
   width: 528px;
   height: 581px;
@@ -687,13 +693,25 @@ svg {
   right: 8px;
   width: 30px;
   height: 30px;
+  padding: 6px;
   cursor: pointer;
   border-radius: 50%;
   background: var(--white-text-color);
-  border: 1px solid var(--close-button-border-color);
+  border: none;
+  outline: 1px solid var(--close-button-border-color);
 }
 
-/* Форми */
+.modal-close .icon {
+  transition: color var(--transition-duration) var(--timing-function);
+}
+
+.modal-close:hover .icon {
+  color: var(--accent-color);
+}
+
+/* ФОРМИ */
+
+/* Підписка */
 
 .subscription-form {
   display: flex;
@@ -732,9 +750,10 @@ svg {
   border-radius: 4px;
 }
 
-.subscription-button {
+.submit-button {
   display: inline-flex;
   align-items: center;
+  text-align: center;
   padding-top: 10px;
   padding-left: 28px;
   padding-bottom: 10px;
@@ -748,6 +767,8 @@ svg {
 
   color: var(--white-text-color);
   background: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -756,4 +777,88 @@ svg {
 .send-icon {
   margin-left: 9px;
   fill: currentColor;
+}
+
+/* Зворотній зв'язок */
+
+.callback-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+
+  color: var(--secondary-text-color);
+}
+
+.callback-label {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+}
+
+.callback-label:nth-child(5) {
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+
+.user-agreement {
+  color: var(--accent-color);
+}
+
+.callback-field {
+  position: relative;
+}
+
+.callback-input {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.callback-comment {
+  width: 100%;
+  margin-top: 4px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+.callback-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  transform: translateY(-50%);
+}
+
+.callback .submit-button {
+  display: inline-block;
+}
+
+.callback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
