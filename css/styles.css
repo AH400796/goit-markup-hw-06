@@ -862,7 +862,7 @@ svg {
 
   font-weight: 400;
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.11;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 
