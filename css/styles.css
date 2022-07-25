@@ -931,6 +931,11 @@ svg {
   border-color: var(--accent-color);
 }
 
+.checkbox:hover + .checkbox-custom,
+.checkbox:focus + .checkbox-custom {
+  border-color: var(--accent-color);
+}
+
 .icon-check {
   transition: transform var(--transition-duration) var(--timing-function), border var(--transition-duration) var(--timing-function);
 }
